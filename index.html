@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Engagement Enhancer</title>
+        <script type="text/javascript" src="engagement-enhancer.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h3>Click "Show Menu"</h3>
+        <div id="sampleAppScreenshotContainer">
+            <img src="assets/SampleApp.png" id="sampleAppScreenshot" usemap="#menuButton" />
+            <map name="menuButton">
+                <area shape="rect" coords="870,40,980,110" href="#" alt="Show Menu" onclick="showSidebar()">
+            </map>
+            <div id="sidebar">
+                <h3>Menu</h3>
+                <hr />
+                <ul>
+                    <li>ℹ️ &nbsp;About This Board</li>
+                    <li>🖼 &nbsp;Change Background</li>
+                    <li>🔎 &nbsp;Search Cards</li>
+                    <li id="whats-new">🌁 &nbsp;See what's new</li>
+                    <li onclick="engadged()">🚤 &nbsp;Power Ups</li>
+                    <li onclick="clickedOnMore()">🗺 &nbsp;More</li>
+                </ul>
+                <hr />
+                <img src="assets/arrow.png" id="arrow" />
+            </div>
+        </div>
+        <script type="text/javascript">
+            function showSidebar() {
+                document.getElementById("sidebar").style.display = "block";
+
+                initEngagementEnhancer(function() {
+                    document.getElementById("whats-new").style.display = "block";
+                })
+            }
+            function engadged() {
+                alert("Successfully enhanced engagement 🎉")
+            }
+            function clickedOnMore() {
+                
+            }
+        </script>
+    </body>
+</html>
